@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#FF6B00">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BharatFind">
+<title>BharatFind – India's #1 Location & Service Finder | भारत का नंबर 1 लोकेशन खोज</title>
+<meta name="description" content="BharatFind – भारत की सबसे आसान लोकेशन खोज। Find any city, village, pincode, hospital, school across India. Hindi, English, Tamil, Telugu, Bengali support. बिल्कुल मुफ्त!">
+<meta name="keywords" content="india location finder, bharat location search, hindi location app, pincode finder india, city village search india, भारत लोकेशन, शहर खोज, गांव खोज, पिनकोड, india map, india city finder">
+<meta name="author" content="BharatFind">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://bharatfind.in/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bharatfind.in/">
+<meta property="og:title" content="BharatFind – India's #1 Location Finder | भारत का नंबर 1 लोकेशन खोज">
+<meta property="og:description" content="Find any location in India – cities, villages, pincodes, hospitals & more. Supports Hindi, English & 5 regional languages. Free & fast!">
+<meta property="og:image" content="https://bharatfind.in/og-image.jpg">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:locale:alternate" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BharatFind – भारत का नंबर 1 लोकेशन खोज">
+<meta name="twitter:description" content="India's most complete location & services finder. Free, fast, multilingual.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BharatFind",
+  "alternateName": "भारतफाइंड",
+  "url": "https://bharatfind.in",
+  "description": "India's #1 multilingual location and services finder app",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"},
+  "inLanguage": ["hi", "en", "ta", "te", "bn", "mr"],
+  "areaServed": {"@type": "Country", "name": "India"},
+  "featureList": "Location search, Pincode finder, Hospital finder, School finder, Multilingual"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --saffron: #FF6B00; --saffron-light: #FF9A3C; --saffron-dark: #D45500;
+  --saffron-glow: rgba(255,107,0,0.15); --saffron-ultra: rgba(255,107,0,0.08);
+  --india-green: #138808; --india-green-light: #1AAF0A;
+  --bg: #0A0D14; --bg2: #0F1420; --bg3: #141922;
+  --surface: #171D2B; --surface2: #1C2335; --surface3: #212840;
+  --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.12);
+  --border-accent: rgba(255,107,0,0.25);
+  --text: #E8EDF8; --text2: #B0BAD0; --text3: #6A7590;
+  --font-display: 'Baloo 2', 'Noto Sans Devanagari', sans-serif;
+  --font-body: 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --r-sm:8px; --r-md:12px; --r-lg:18px; --r-xl:24px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3); --shadow-md: 0 8px 32px rgba(0,0,0,0.5);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.7); --shadow-orange: 0 8px 32px rgba(255,107,0,0.25);
+  --ease: cubic-bezier(0.4,0,0.2,1); --ease-spring: cubic-bezier(0.34,1.56,0.64,1);
+}
+[data-theme="light"] {
+  --bg:#F7F9FF; --bg2:#FFFFFF; --surface:#FFFFFF; --surface2:#F5F7FF; --surface3:#EEF2FF;
+  --border:rgba(0,0,0,0.08); --border2:rgba(0,0,0,0.13); --text:#0A0D14; --text2:#3A4260; --text3:#7A849A;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;line-height:1.6;transition:background 0.3s,color 0.3s}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0}
+#app{position:relative;z-index:1}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.bg-mesh{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.6}
+.orb-1{width:700px;height:500px;top:-200px;left:-200px;background:radial-gradient(circle,rgba(255,107,0,0.07),transparent 70%)}
+.orb-2{width:500px;height:500px;bottom:-150px;right:-100px;background:radial-gradient(circle,rgba(19,136,8,0.05),transparent 70%)}
+.orb-3{width:400px;height:400px;top:40%;left:35%;background:radial-gradient(circle,rgba(0,0,128,0.04),transparent 70%);animation:orb-float 8s ease-in-out infinite}
+@keyframes orb-float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+.tricolor-bar{height:4px;background:linear-gradient(90deg,#FF6B00 0%,#FF6B00 33.3%,#FFFFFF 33.3%,#FFFFFF 66.6%,#138808 66.6%,#138808 100%)}
+.navbar{background:rgba(10,13,20,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;transition:background 0.3s}
+[data-theme="light"] .navbar{background:rgba(247,249,255,0.95)}
+.nav-inner{display:flex;align-items:center;gap:12px;padding:12px 16px;max-width:1100px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--saffron),var(--saffron-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:var(--shadow-orange);flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text .main{font-family:var(--font-display);font-size:1.2rem;font-weight:800;color:var(--text)}
+.logo-text .main span{color:var(--saffron)}
+.logo-text .sub{font-size:0.65rem;color:var(--text3);font-weight:500;letter-spacing:0.05em}
+.nav-search{flex:1;max-width:500px;position:relative}
+.nav-search input{width:100%;background:var(--surface2);border:1.5px solid var(--border2);border-radius:100px;padding:9px 16px 9px 38px;font-size:0.88rem;font-family:var(--font-body);color:var(--text);outline:none;transition:all 0.2s}
+.nav-search input:focus{border-color:var(--saffron);box-shadow:0 0 0 3px var(--saffron-glow)}
+.nav-search .s-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:15px;pointer-events:none}
+.nav-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.icon-btn{width:36px;height:36px;border-radius:9px;border:1px solid var(--border2);background:var(--surface2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all 0.2s;color:var(--text2)}
+.icon-btn:hover{background:var(--surface3);border-color:var(--saffron);color:var(--saffron);transform:scale(1.05)}
+.lang-switcher{position:relative}
+.lang-btn{display:flex;align-items:center;gap:6px;padding:7px 12px;background:var(--surface2);border:1px solid var(--border2);border-radius:9px;cursor:pointer;font-size:0.78rem;font-weight:600;color:var(--text2);transition:all 0.2s;white-space:nowrap}
+.lang-btn:hover{background:var(--surface3);color:var(--saffron);border-color:var(--saffron)}
+.lang-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-lg);padding:8px;min-width:200px;display:none;z-index:2000;box-shadow:var(--shadow-lg);animation:dropdown-in 0.15s var(--ease-spring)}
+.lang-dropdown.open{display:block}
+@keyframes dropdown-in{from{opacity:0;transform:translateY(-8px) scale(0.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.lang-option{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;cursor:pointer;transition:background 0.15s;font-size:0.88rem;color:var(--text2)}
+.lang-option:hover,.lang-option.active{background:var(--saffron-ultra);color:var(--saffron)}
+.lang-option .flag{font-size:18px} .lang-option .name{font-weight:600} .lang-option .native{font-size:0.75rem;opacity:0.7;margin-left:auto}
+</style>
+<style>
+.hero{padding:64px 16px 48px;text-align:center;position:relative;overflow:hidden}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--saffron-ultra);border:1px solid var(--border-accent);border-radius:100px;padding:6px 16px;font-size:0.78rem;font-weight:600;color:var(--saffron);margin-bottom:24px;animation:fade-in-up 0.5s both}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--saffron);animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.7)}}
+.hero h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.8rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px;animation:fade-in-up 0.5s 0.1s both}
+.hero h1 .line1{display:block;color:var(--text)}
+.hero h1 .line2{display:block;background:linear-gradient(135deg,var(--saffron),var(--saffron-light),#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .line3{display:block;color:var(--india-green-light)}
+.hero-sub{font-size:clamp(0.95rem,2.5vw,1.15rem);color:var(--text2);max-width:580px;margin:0 auto 36px;line-height:1.7;animation:fade-in-up 0.5s 0.2s both}
+.hero-sub strong{color:var(--saffron)}
+.hero-search{max-width:680px;margin:0 auto 32px;animation:fade-in-up 0.5s 0.3s both}
+.search-box{background:var(--surface);border:1.5px solid var(--border-accent);border-radius:20px;padding:8px;display:flex;align-items:stretch;gap:8px;box-shadow:var(--shadow-md);position:relative;transition:box-shadow 0.2s}
+.search-box:focus-within{box-shadow:var(--shadow-md),0 0 0 3px var(--saffron-glow);border-color:var(--saffron)}
+.search-icon-left{display:flex;align-items:center;justify-content:center;width:44px;color:var(--saffron);font-size:20px;flex-shrink:0}
+.search-main-input{flex:1;background:none;border:none;outline:none;font-size:1.05rem;font-family:var(--font-body);color:var(--text);padding:10px 0;min-width:0}
+.search-main-input::placeholder{color:var(--text3)}
+.search-voice-btn{width:44px;height:44px;border-radius:12px;background:var(--surface3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:var(--text3);transition:all 0.2s;flex-shrink:0}
+.search-voice-btn:hover{color:var(--saffron);border-color:var(--saffron);background:var(--saffron-ultra)}
+.search-voice-btn.listening{color:#ef4444;border-color:#ef4444;animation:listening-pulse 1s infinite}
+@keyframes listening-pulse{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}50%{box-shadow:0 0 0 8px rgba(239,68,68,0.1)}}
+.search-btn{padding:10px 24px;background:linear-gradient(135deg,var(--saffron),var(--saffron-dark));border:none;border-radius:14px;font-size:0.93rem;font-weight:700;font-family:var(--font-display);color:white;cursor:pointer;white-space:nowrap;transition:all 0.2s;box-shadow:var(--shadow-orange);display:flex;align-items:center;gap:6px}
+.search-btn:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(255,107,0,0.35)}
+.search-suggestions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.sug-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:100px;font-size:0.78rem;color:var(--text2);cursor:pointer;transition:all 0.2s;user-select:none}
+.sug-chip:hover{background:var(--saffron-ultra);border-color:var(--border-accent);color:var(--saffron)}
+.search-dropdown{position:absolute;top:calc(100% + 10px);left:0;right:0;background:var(--surface);border:1px solid var(--border2);border-radius:18px;max-height:380px;overflow-y:auto;z-index:500;display:none;box-shadow:var(--shadow-lg)}
+.search-dropdown.open{display:block;animation:dropdown-in 0.15s var(--ease-spring)}
+.search-dropdown::-webkit-scrollbar{width:4px}
+.search-dropdown::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+.dd-section-title{padding:10px 16px 6px;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:1;display:flex;align-items:center;justify-content:space-between}
+.dd-count{color:var(--saffron)}
+.dd-item{padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:background 0.12s;border-bottom:1px solid rgba(255,255,255,0.03)}
+.dd-item:last-child{border-bottom:none}
+.dd-item:hover{background:var(--saffron-ultra)}
+.dd-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ddi-city{background:rgba(255,107,0,0.1)} .ddi-state{background:rgba(19,136,8,0.1)} .ddi-district{background:rgba(59,130,246,0.1)} .ddi-village{background:rgba(167,139,250,0.1)}
+.dd-info{flex:1;min-width:0}
+.dd-name{font-size:0.9rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dd-name mark{background:none;color:var(--saffron);font-weight:700}
+.dd-meta{font-size:0.73rem;color:var(--text3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dd-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap}
+.dd-tag{font-size:0.6rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:2px 7px;border-radius:100px;border:1px solid}
+.tag-city{color:var(--saffron);border-color:rgba(255,107,0,0.3);background:rgba(255,107,0,0.07)}
+.tag-state{color:var(--india-green-light);border-color:rgba(26,175,10,0.3);background:rgba(26,175,10,0.07)}
+.tag-dist{color:#60a5fa;border-color:rgba(96,165,250,0.3);background:rgba(96,165,250,0.07)}
+.tag-coords{color:#a78bfa;border-color:rgba(167,139,250,0.3);background:rgba(167,139,250,0.07)}
+.dd-arrow{color:var(--text3);font-size:14px;flex-shrink:0}
+.dd-no-results{padding:32px;text-align:center;color:var(--text3);font-size:0.9rem}
+@keyframes fade-in-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:48px}
+@media(max-width:600px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
+.stat-item{background:var(--bg2);padding:20px 16px;text-align:center;transition:background 0.2s}
+.stat-item:hover{background:var(--surface)}
+.stat-num{font-family:var(--font-display);font-size:1.8rem;font-weight:800;line-height:1;margin-bottom:4px}
+.stat-lbl{font-size:0.72rem;color:var(--text3);font-weight:500}
+.s-orange{color:var(--saffron)} .s-green{color:var(--india-green-light)} .s-blue{color:#60a5fa} .s-purple{color:#a78bfa}
+.section{padding:48px 16px}
+.sec-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px}
+.sec-label{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.sec-label::before{content:'';width:20px;height:2px;background:var(--saffron);border-radius:2px}
+.sec-title{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--text);letter-spacing:-0.02em;line-height:1.2}
+.sec-title span{color:var(--saffron)}
+.see-all{font-size:0.82rem;font-weight:600;color:var(--saffron);text-decoration:none;display:flex;align-items:center;gap:4px;padding:6px 14px;background:var(--saffron-ultra);border:1px solid var(--border-accent);border-radius:100px;transition:all 0.2s}
+.see-all:hover{background:var(--saffron);color:white;border-color:var(--saffron)}
+.categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:24px 16px 20px;text-align:center;cursor:pointer;transition:all 0.2s var(--ease-spring);text-decoration:none;display:block;position:relative;overflow:hidden}
+.cat-card:hover{transform:translateY(-4px);border-color:var(--border-accent);box-shadow:var(--shadow-orange)}
+.cat-icon{font-size:2.2rem;margin-bottom:12px;display:block;transition:transform 0.2s var(--ease-spring)}
+.cat-card:hover .cat-icon{transform:scale(1.15)}
+.cat-name{font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3}
+.cat-name-hi{font-size:0.72rem;color:var(--text3);font-weight:500}
+.cat-count{font-size:0.65rem;color:var(--saffron);font-weight:600;margin-top:6px;padding:2px 8px;background:var(--saffron-ultra);border-radius:100px;display:inline-block}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.feat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;position:relative;overflow:hidden;transition:all 0.2s;cursor:pointer}
+.feat-card:hover{border-color:var(--border-accent);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.feat-card-accent{position:absolute;top:0;left:0;right:0;height:3px}
+.feat-card-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.feat-card h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.feat-card p{font-size:0.85rem;color:var(--text2);line-height:1.6}
+.feat-badge{display:inline-flex;align-items:center;gap:4px;margin-top:14px;padding:4px 10px;border-radius:100px;font-size:0.67rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase}
+.locations-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.loc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.loc-card:hover{border-color:var(--border-accent);background:var(--surface2);transform:translateX(4px)}
+.loc-emoji{font-size:1.8rem;flex-shrink:0}
+.loc-info{flex:1;min-width:0}
+.loc-name{font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.loc-state{font-size:0.72rem;color:var(--text3);margin-top:2px}
+.loc-coords{font-size:0.65rem;color:var(--saffron);font-family:var(--font-mono);margin-top:3px}
+</style>
+<style>
+.result-panel{background:var(--surface);border:1px solid var(--border2);border-radius:24px;overflow:hidden;display:none;margin-bottom:32px;animation:slide-up 0.25s var(--ease-spring)}
+.result-panel.show{display:block}
+@keyframes slide-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-header{padding:24px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.result-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),#FFD700,var(--india-green-light))}
+.result-big-icon{width:60px;height:60px;border-radius:16px;background:var(--saffron-glow);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+.result-title-block{flex:1;min-width:0}
+.result-name{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text);letter-spacing:-0.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.result-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.result-addr{font-size:0.83rem;color:var(--text2);margin-top:8px;line-height:1.5}
+.result-actions{display:flex;gap:8px;flex-shrink:0;align-items:flex-start;flex-wrap:wrap}
+.r-btn{padding:9px 16px;border-radius:10px;font-size:0.78rem;font-weight:700;cursor:pointer;border:1px solid;font-family:var(--font-body);transition:all 0.15s;display:flex;align-items:center;gap:6px}
+.r-btn-copy{background:var(--surface2);border-color:var(--border2);color:var(--text2)}
+.r-btn-copy:hover{color:var(--text);border-color:rgba(255,255,255,0.2)}
+.r-btn-map{background:var(--saffron);border-color:var(--saffron);color:white;box-shadow:var(--shadow-orange)}
+.r-btn-map:hover{background:var(--saffron-light)}
+.r-btn-share{background:#25D366;border-color:#25D366;color:white}
+.r-btn-share:hover{background:#20BB5C}
+.result-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border)}
+.r-field{background:var(--surface);padding:16px 20px}
+.r-fl{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.r-fv{font-size:0.92rem;font-weight:600;color:var(--text)}
+.r-fv a{color:var(--saffron);text-decoration:none}
+.result-coords{padding:16px 20px;border-top:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--surface)}
+.coord-chip{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:8px 14px;font-family:var(--font-mono);font-size:0.8rem;display:flex;align-items:center;gap:8px}
+.coord-label{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3)}
+.coord-val{color:var(--india-green-light);font-weight:600}
+.lang-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;animation:fade-in-up 0.4s 0.4s both}
+.lang-tab{padding:8px 18px;border-radius:100px;font-size:0.82rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border2);background:var(--surface2);color:var(--text2);transition:all 0.2s;display:flex;align-items:center;gap:6px}
+.lang-tab:hover{border-color:var(--saffron);color:var(--saffron)}
+.lang-tab.active{background:var(--saffron);border-color:var(--saffron);color:white}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px 24px;position:relative;overflow:hidden;transition:all 0.2s}
+.step-card:hover{border-color:var(--border-accent);transform:translateY(-3px)}
+.step-num{font-family:var(--font-display);font-size:4rem;font-weight:800;color:var(--saffron);opacity:0.12;position:absolute;top:-8px;right:16px;line-height:1;pointer-events:none}
+.step-icon{font-size:2rem;margin-bottom:14px}
+.step-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.step-desc{font-size:0.83rem;color:var(--text2);line-height:1.6}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.trust-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:24px;text-align:center;transition:all 0.2s}
+.trust-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+.trust-icon{font-size:2.2rem;margin-bottom:12px}
+.trust-title{font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:6px}
+.trust-desc{font-size:0.78rem;color:var(--text3);line-height:1.5}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.testi-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:24px;transition:all 0.2s;position:relative}
+.testi-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+.testi-quote{font-size:3rem;color:var(--saffron);opacity:0.3;position:absolute;top:12px;right:20px;line-height:1;font-family:Georgia,serif}
+.testi-text{font-size:0.9rem;color:var(--text2);line-height:1.65;margin-bottom:18px;font-style:italic}
+.testi-text strong{color:var(--text);font-style:normal}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;background:var(--surface3);flex-shrink:0}
+.testi-name{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--text)}
+.testi-role{font-size:0.72rem;color:var(--text3)}
+.stars{color:#FFD700;font-size:0.85rem;margin-top:2px}
+.cta-section{padding:64px 16px;text-align:center;position:relative;overflow:hidden}
+.cta-box{background:var(--surface);border:1px solid var(--border-accent);border-radius:28px;padding:56px 32px;max-width:720px;margin:0 auto;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(255,107,0,0.05),transparent 70%);pointer-events:none}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--text);letter-spacing:-0.02em;margin-bottom:14px}
+.cta-box h2 span{color:var(--saffron)}
+.cta-box p{font-size:0.95rem;color:var(--text2);max-width:480px;margin:0 auto 32px;line-height:1.7}
+.cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{padding:14px 32px;background:linear-gradient(135deg,var(--saffron),var(--saffron-dark));border:none;border-radius:14px;font-size:0.95rem;font-weight:700;font-family:var(--font-display);color:white;cursor:pointer;transition:all 0.2s;box-shadow:var(--shadow-orange);display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,107,0,0.35)}
+.btn-secondary{padding:14px 32px;background:var(--surface2);border:1.5px solid var(--border2);border-radius:14px;font-size:0.95rem;font-weight:700;font-family:var(--font-display);color:var(--text);cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn-secondary:hover{border-color:var(--saffron);color:var(--saffron);transform:translateY(-2px)}
+.whatsapp-float{position:fixed;bottom:80px;right:20px;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.wa-btn{width:54px;height:54px;border-radius:50%;background:#25D366;border:none;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;box-shadow:0 8px 24px rgba(37,211,102,0.4);transition:all 0.2s var(--ease-spring)}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 12px 32px rgba(37,211,102,0.5)}
+.wa-tooltip{background:var(--surface);border:1px solid var(--border2);border-radius:100px;padding:6px 14px;font-size:0.78rem;font-weight:600;color:var(--text);white-space:nowrap;box-shadow:var(--shadow-sm);animation:fade-in-up 0.3s}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);display:none;z-index:800;padding:8px 0;backdrop-filter:blur(20px)}
+@media(max-width:768px){.bottom-nav{display:flex}}
+.bnav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;cursor:pointer;transition:all 0.2s;color:var(--text3);border:none;background:none;font-family:var(--font-body)}
+.bnav-item.active{color:var(--saffron)}
+.bnav-icon{font-size:20px}
+.bnav-label{font-size:0.62rem;font-weight:600;letter-spacing:0.02em}
+.footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 16px 100px}
+@media(min-width:769px){.footer{padding-bottom:48px}}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 40px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.footer-desc{font-size:0.83rem;color:var(--text3);line-height:1.7;margin:14px 0 20px;max-width:280px}
+.footer-col h4{font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:var(--text);margin-bottom:14px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{color:var(--text3);text-decoration:none;font-size:0.83rem;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--saffron)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.78rem;color:var(--text3)}
+.footer-bottom a{color:var(--text3);text-decoration:none}
+.footer-bottom a:hover{color:var(--saffron)}
+.tricolor-flag{display:flex;gap:4px;align-items:center}
+.flag-stripe{width:6px;height:18px;border-radius:2px}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface);border:1px solid var(--border2);border-radius:100px;padding:12px 24px;font-size:0.85rem;font-weight:600;color:var(--text);box-shadow:var(--shadow-md);opacity:0;transition:all 0.3s var(--ease-spring);z-index:2000;white-space:nowrap;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.skeleton{background:linear-gradient(90deg,var(--surface2) 0%,var(--surface3) 50%,var(--surface2) 100%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:8px}
+@keyframes shimmer{to{background-position:-200% 0}}
+:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:var(--saffron)}
+@media(max-width:768px){.hero{padding:40px 16px 32px}.nav-search{display:none}.categories-grid{grid-template-columns:repeat(3,1fr)}.locations-grid{grid-template-columns:1fr}.search-btn span{display:none}.search-btn{padding:10px 14px}}
+@media(max-width:480px){.categories-grid{grid-template-columns:repeat(2,1fr)}.stats-bar{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+@media print{.navbar,.bottom-nav,.whatsapp-float,.footer{display:none}.result-panel{display:block!important}}
+</style>
+</head>
+<body>
+<div id="app">
+<div class="bg-mesh" aria-hidden="true">
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+</div>
+<div class="tricolor-bar" role="presentation" aria-hidden="true"></div>
+<header class="navbar" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="BharatFind Home">
+      <div class="logo-icon" aria-hidden="true">🗺️</div>
+      <div class="logo-text">
+        <div class="main"><span>Bharat</span>Find</div>
+        <div class="sub">भारत का नंबर 1 लोकेशन खोज</div>
+      </div>
+    </a>
+    <div class="nav-search" role="search" aria-label="Quick search">
+      <span class="s-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="navSearch" placeholder="Search any location in India..." aria-label="Search locations" autocomplete="off">
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switcher" role="navigation" aria-label="Language selection">
+        <button class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="listbox" onclick="toggleLang()">
+          <span id="currentLangFlag">🇮🇳</span>
+          <span id="currentLangName">हिंदी</span>
+          <span aria-hidden="true">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Select language">
+          <div class="lang-option active" onclick="setLang('hi','🇮🇳','हिंदी','Hindi')" role="option" aria-selected="true">
+            <span class="flag">🇮🇳</span><span class="name">हिंदी</span><span class="native">Hindi</span>
+          </div>
+          <div class="lang-option" onclick="setLang('en','🇬🇧','English','English')" role="option">
+            <span class="flag">🇬🇧</span><span class="name">English</span><span class="native">English</span>
+          </div>
+          <div class="lang-option" onclick="setLang('ta','🌟','தமிழ்','Tamil')" role="option">
+            <span class="flag">🌟</span><span class="name">தமிழ்</span><span class="native">Tamil</span>
+          </div>
+          <div class="lang-option" onclick="setLang('te','🌺','తెలుగు','Telugu')" role="option">
+            <span class="flag">🌺</span><span class="name">తెలుగు</span><span class="native">Telugu</span>
+          </div>
+          <div class="lang-option" onclick="setLang('bn','🌸','বাংলা','Bengali')" role="option">
+            <span class="flag">🌸</span><span class="name">বাংলা</span><span class="native">Bengali</span>
+          </div>
+          <div class="lang-option" onclick="setLang('mr','🏔️','मराठी','Marathi')" role="option">
+            <span class="flag">🏔️</span><span class="name">मराठी</span><span class="native">Marathi</span>
+          </div>
+          <div class="lang-option" onclick="setLang('gu','🦁','ગુજરાતી','Gujarati')" role="option">
+            <span class="flag">🦁</span><span class="name">ગુજરાતી</span><span class="native">Gujarati</span>
+          </div>
+        </div>
+      </div>
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="icon-btn" onclick="increaseFontSize()" aria-label="Increase font size" title="Increase text size">A+</button>
+    </div>
+  </nav>
+</header>
+<main id="main-content">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-tag" role="status">
+      <span class="dot" aria-hidden="true"></span>
+      <span data-i18n="live">Live • 36 States • 857+ Cities • 6 Lakh+ Villages</span>
+    </div>
+    <h1 id="hero-title">
+      <span class="line1" data-i18n="hero1">खोजो भारत को,</span>
+      <span class="line2" data-i18n="hero2">हर गांव, हर शहर</span>
+      <span class="line3" data-i18n="hero3">Find Every Corner of India</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero-sub">India's <strong>most complete</strong> location finder — cities, villages, pincodes, hospitals & more. Available in <strong>7 languages</strong>. Free & instant.</p>
+    <div class="lang-tabs" role="tablist" aria-label="Quick language selection">
+      <button class="lang-tab active" onclick="setLang('hi','🇮🇳','हिंदी','Hindi')" role="tab" aria-selected="true">🇮🇳 हिंदी</button>
+      <button class="lang-tab" onclick="setLang('en','🇬🇧','English','English')" role="tab">🇬🇧 English</button>
+      <button class="lang-tab" onclick="setLang('ta','🌟','தமிழ்','Tamil')" role="tab">🌟 தமிழ்</button>
+      <button class="lang-tab" onclick="setLang('te','🌺','తెలుగు','Telugu')" role="tab">🌺 Telugu</button>
+      <button class="lang-tab" onclick="setLang('bn','🌸','বাংলা','Bengali')" role="tab">🌸 বাংলা</button>
+      <button class="lang-tab" onclick="setLang('mr','🏔️','मराठी','Marathi')" role="tab">🏔️ मराठी</button>
+    </div>
+    <div class="hero-search">
+      <div class="search-box" role="search">
+        <div class="search-icon-left" aria-hidden="true">📍</div>
+        <input type="search" id="heroInput" class="search-main-input" placeholder="शहर, गांव, पिनकोड खोजें... / Search city, village, pincode..." aria-label="Search any location in India" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+        <button class="search-voice-btn" id="voiceBtn" onclick="startVoice()" aria-label="Voice search" title="Voice Search">🎤</button>
+        <button class="search-btn" onclick="doSearch()" aria-label="Search">🔍 <span data-i18n="search-btn">खोजें</span></button>
+        <div class="search-dropdown" id="heroDropdown" role="listbox" aria-label="Search suggestions" aria-live="polite"></div>
+      </div>
+      <div class="search-suggestions" aria-label="Popular searches">
+        <button class="sug-chip" onclick="quickSearch('Mumbai')">🏙️ Mumbai</button>
+        <button class="sug-chip" onclick="quickSearch('Delhi')">🏛️ Delhi</button>
+        <button class="sug-chip" onclick="quickSearch('Bengaluru')">💻 Bengaluru</button>
+        <button class="sug-chip" onclick="quickSearch('Chennai')">🌊 Chennai</button>
+        <button class="sug-chip" onclick="quickSearch('Jaipur')">🏯 Jaipur</button>
+        <button class="sug-chip" onclick="quickSearch('Ayodhya')">🛕 Ayodhya</button>
+      </div>
+    </div>
+    <div class="result-panel" id="resultPanel" role="region" aria-label="Location details" aria-live="polite">
+      <div class="result-header">
+        <div class="result-big-icon" id="rIcon" aria-hidden="true">📍</div>
+        <div class="result-title-block">
+          <div class="result-name" id="rName">—</div>
+          <div class="result-tags" id="rTags"></div>
+          <div class="result-addr" id="rAddr">—</div>
+        </div>
+        <div class="result-actions">
+          <button class="r-btn r-btn-copy" onclick="copyResult()" aria-label="Copy location details">📋 Copy</button>
+          <button class="r-btn r-btn-map" id="rMapBtn" aria-label="Open on map">🗺️ Map</button>
+          <button class="r-btn r-btn-share" onclick="shareWhatsApp()" aria-label="Share on WhatsApp">💬 WhatsApp</button>
+        </div>
+      </div>
+      <div class="result-fields" id="rFields"></div>
+      <div class="result-coords" id="rCoords"></div>
+    </div>
+  </div>
+</section>
+<div class="stats-bar" role="complementary" aria-label="Platform statistics">
+  <div class="stat-item"><div class="stat-num s-orange">36</div><div class="stat-lbl">States & UTs</div></div>
+  <div class="stat-item"><div class="stat-num s-green">857+</div><div class="stat-lbl">Cities & Towns</div></div>
+  <div class="stat-item"><div class="stat-num s-blue">6L+</div><div class="stat-lbl">Villages</div></div>
+  <div class="stat-item"><div class="stat-num s-purple">7</div><div class="stat-lbl">Languages</div></div>
+</div>
+<section class="section" id="categories" aria-labelledby="cat-title">
+  <div class="container">
+    <div class="sec-header">
+      <div><div class="sec-label">क्या खोज रहे हैं?</div><h2 class="sec-title" id="cat-title">सभी <span>सेवाएं</span> एक जगह</h2></div>
+      <a href="#" class="see-all" aria-label="View all categories">सभी देखें →</a>
+    </div>
+    <div class="categories-grid" role="list">
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('hospital');return false"><span class="cat-icon">🏥</span><div class="cat-name">Hospital</div><div class="cat-name-hi">अस्पताल</div><div class="cat-count">12,400+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('school');return false"><span class="cat-icon">🏫</span><div class="cat-name">School</div><div class="cat-name-hi">स्कूल</div><div class="cat-count">3.2L+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('railway');return false"><span class="cat-icon">🚂</span><div class="cat-name">Railway Station</div><div class="cat-name-hi">रेलवे स्टेशन</div><div class="cat-count">7,300+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('temple');return false"><span class="cat-icon">🛕</span><div class="cat-name">Temple</div><div class="cat-name-hi">मंदिर</div><div class="cat-count">2L+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('bank');return false"><span class="cat-icon">🏦</span><div class="cat-name">Bank / ATM</div><div class="cat-name-hi">बैंक / एटीएम</div><div class="cat-count">1.8L+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('postoffice');return false"><span class="cat-icon">📮</span><div class="cat-name">Post Office</div><div class="cat-name-hi">डाक घर</div><div class="cat-count">1.5L+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('airport');return false"><span class="cat-icon">✈️</span><div class="cat-name">Airport</div><div class="cat-name-hi">हवाई अड्डा</div><div class="cat-count">144+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('village');return false"><span class="cat-icon">🌾</span><div class="cat-name">Village</div><div class="cat-name-hi">गांव</div><div class="cat-count">6L+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('pincode');return false"><span class="cat-icon">📬</span><div class="cat-name">Pincode</div><div class="cat-name-hi">पिनकोड</div><div class="cat-count">19,000+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('college');return false"><span class="cat-icon">🎓</span><div class="cat-name">College</div><div class="cat-name-hi">कॉलेज</div><div class="cat-count">42,000+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('market');return false"><span class="cat-icon">🛒</span><div class="cat-name">Market</div><div class="cat-name-hi">बाज़ार</div><div class="cat-count">50,000+</div></a>
+      <a href="#" class="cat-card" role="listitem" onclick="filterCategory('police');return false"><span class="cat-icon">👮</span><div class="cat-name">Police Station</div><div class="cat-name-hi">पुलिस थाना</div><div class="cat-count">17,000+</div></a>
+    </div>
+  </div>
+</section>
+<section class="section" id="popular" aria-labelledby="pop-title" style="padding-top:0">
+  <div class="container">
+    <div class="sec-header">
+      <div><div class="sec-label">Most Searched</div><h2 class="sec-title" id="pop-title">लोकप्रिय <span>शहर</span></h2></div>
+    </div>
+    <div class="locations-grid" id="popularGrid" role="list" aria-label="Popular cities"></div>
+  </div>
+</section>
+<section class="section" id="features" aria-labelledby="feat-title" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-header"><div><div class="sec-label">Why BharatFind</div><h2 class="sec-title" id="feat-title">क्यों है <span>सबसे बेहतर?</span></h2></div></div>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-card-accent" style="background:linear-gradient(90deg,var(--saffron),var(--saffron-light))"></div><div class="feat-card-icon" style="background:var(--saffron-glow)">🌐</div><h3>7 भाषाओं में</h3><p>Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati — अपनी भाषा में खोजें, समझें, और शेयर करें।</p><div class="feat-badge" style="background:var(--saffron-ultra);color:var(--saffron);border:1px solid var(--border-accent)">✓ Multilingual</div></div>
+      <div class="feat-card"><div class="feat-card-accent" style="background:linear-gradient(90deg,var(--india-green),var(--india-green-light))"></div><div class="feat-card-icon" style="background:rgba(19,136,8,0.1)">⚡</div><h3>2G पर भी Fast</h3><p>Slow internet पर भी blazing fast। Page load &lt;2 seconds, offline support, PWA-ready।</p><div class="feat-badge" style="background:rgba(19,136,8,0.1);color:var(--india-green-light);border:1px solid rgba(19,136,8,0.25)">⚡ 2G Optimized</div></div>
+      <div class="feat-card"><div class="feat-card-accent" style="background:linear-gradient(90deg,#60a5fa,#818cf8)"></div><div class="feat-card-icon" style="background:rgba(96,165,250,0.1)">📍</div><h3>Exact Coordinates</h3><p>हर लोकेशन की सटीक Latitude & Longitude। Verified data from official sources।</p><div class="feat-badge" style="background:rgba(96,165,250,0.1);color:#60a5fa;border:1px solid rgba(96,165,250,0.25)">📡 GPS Accurate</div></div>
+      <div class="feat-card"><div class="feat-card-accent" style="background:linear-gradient(90deg,#a78bfa,#ec4899)"></div><div class="feat-card-icon" style="background:rgba(167,139,250,0.1)">🎤</div><h3>Voice Search</h3><p>Type करने की ज़रूरत नहीं। बोलिए और खोजिए। Hindi & English voice support।</p><div class="feat-badge" style="background:rgba(167,139,250,0.1);color:#a78bfa;border:1px solid rgba(167,139,250,0.25)">🎙️ Voice Enabled</div></div>
+      <div class="feat-card"><div class="feat-card-accent" style="background:linear-gradient(90deg,#f59e0b,#f97316)"></div><div class="feat-card-icon" style="background:rgba(245,158,11,0.1)">📲</div><h3>WhatsApp Share</h3><p>कोई भी लोकेशन एक click में WhatsApp पर share करें। Family को map link भेजें।</p><div class="feat-badge" style="background:rgba(37,211,102,0.1);color:#25D366;border:1px solid rgba(37,211,102,0.25)">💚 WhatsApp Ready</div></div>
+      <div class="feat-card"><div class="feat-card-accent" style="background:linear-gradient(90deg,#ef4444,#f97316)"></div><div class="feat-card-icon" style="background:rgba(239,68,68,0.1)">🔒</div><h3>Privacy First</h3><p>कोई registration नहीं, कोई login नहीं। आपका data safe। 100% free forever।</p><div class="feat-badge" style="background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.25)">🔐 100% Private</div></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="container">
+    <div class="sec-header"><div><div class="sec-label">Simple Steps</div><h2 class="sec-title" id="how-title">कैसे <span>काम करता है?</span></h2></div></div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-num" aria-hidden="true">1</div><div class="step-icon">🔍</div><div class="step-title">Search करें</div><div class="step-desc">कोई भी शहर, गांव, पिनकोड, या अस्पताल का नाम type करें। Voice search भी available है।</div></div>
+      <div class="step-card"><div class="step-num" aria-hidden="true">2</div><div class="step-icon">✅</div><div class="step-title">Result देखें</div><div class="step-desc">Exact location, coordinates, state, district सब instant मिलेगा। Map link भी।</div></div>
+      <div class="step-card"><div class="step-num" aria-hidden="true">3</div><div class="step-icon">📤</div><div class="step-title">Share करें</div><div class="step-desc">WhatsApp, Copy, या Map पर share करें। परिवार और दोस्तों को भेजें।</div></div>
+      <div class="step-card"><div class="step-num" aria-hidden="true">4</div><div class="step-icon">🌟</div><div class="step-title">Save करें</div><div class="step-desc">Favorite locations save करें। Next time आने पर instantly मिलेगा।</div></div>
+    </div>
+  </div>
+</section>
+<section class="section" style="padding-top:0" aria-labelledby="trust-title">
+  <div class="container">
+    <div class="sec-header"><div><div class="sec-label">Trust & Safety</div><h2 class="sec-title" id="trust-title">भरोसेमंद <span>& सुरक्षित</span></h2></div></div>
+    <div class="trust-grid">
+      <div class="trust-card"><div class="trust-icon">✅</div><div class="trust-title">Verified Data</div><div class="trust-desc">Official government sources & verified location data from Census India</div></div>
+      <div class="trust-card"><div class="trust-icon">🆓</div><div class="trust-title">100% Free</div><div class="trust-desc">कोई hidden charge नहीं। हमेशा के लिए मुफ्त। No subscription needed</div></div>
+      <div class="trust-card"><div class="trust-icon">🔐</div><div class="trust-title">No Login Needed</div><div class="trust-desc">Registration की ज़रूरत नहीं। अभी शुरू करें, instantly</div></div>
+      <div class="trust-card"><div class="trust-icon">📱</div><div class="trust-title">Works Offline</div><div class="trust-desc">PWA app install करें। Internet के बिना भी basic features काम करें</div></div>
+      <div class="trust-card"><div class="trust-icon">🌍</div><div class="trust-title">Open Source Data</div><div class="trust-desc">OpenStreetMap, Census India, & verified public databases</div></div>
+      <div class="trust-card"><div class="trust-icon">⚡</div><div class="trust-title">No Ads</div><div class="trust-desc">Clean, ad-free experience। कोई distraction नहीं</div></div>
+    </div>
+  </div>
+</section>
+<section class="section" style="background:var(--bg2);padding-top:48px" aria-labelledby="testi-title">
+  <div class="container">
+    <div class="sec-header"><div><div class="sec-label">Real Users</div><h2 class="sec-title" id="testi-title">लोग क्या <span>कहते हैं?</span></h2></div></div>
+    <div class="testimonials-grid" aria-label="User testimonials">
+      <div class="testi-card"><div class="testi-quote" aria-hidden="true">"</div><p class="testi-text">"BharatFind ने मेरी बहुत मदद की। अपने गांव का pincode और coordinates ढूंढने में 2 मिनट लगे। <strong>बहुत आसान app है!</strong>"</p><div class="testi-author"><div class="testi-avatar">👨‍🌾</div><div><div class="testi-name">Ramesh Patel</div><div class="testi-role">Farmer, Gujarat</div><div class="stars">★★★★★</div></div></div></div>
+      <div class="testi-card"><div class="testi-quote" aria-hidden="true">"</div><p class="testi-text">"Tamil language में मिलना बहुत अच्छा लगा। <strong>My village coordinates</strong> exact मिली। WhatsApp share feature super useful!"</p><div class="testi-author"><div class="testi-avatar">👩‍💼</div><div><div class="testi-name">Priya Sundaram</div><div class="testi-role">Teacher, Tamil Nadu</div><div class="stars">★★★★★</div></div></div></div>
+      <div class="testi-card"><div class="testi-quote" aria-hidden="true">"</div><p class="testi-text">"Delivery address verify करने के लिए daily use करता हूं। <strong>Fast and accurate.</strong> 2G पर भी perfectly काम करता है!"</p><div class="testi-author"><div class="testi-avatar">🚚</div><div><div class="testi-name">Arjun Singh</div><div class="testi-role">Delivery Executive, UP</div><div class="stars">★★★★★</div></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="cta-box">
+    <h2 id="cta-title">अभी शुरू करें, <span>बिल्कुल मुफ्त!</span></h2>
+    <p>India का सबसे complete location finder। 36 states, 857+ cities, 6 lakh+ villages — सब कुछ एक जगह।</p>
+    <div class="cta-buttons">
+      <a href="#heroInput" class="btn-primary" onclick="document.getElementById('heroInput').focus()">🔍 Search Now — खोजें</a>
+      <a href="#" class="btn-secondary" onclick="installPWA();return false">📲 Install App</a>
+    </div>
+  </div>
+</section>
+<section class="section" id="blog" aria-labelledby="blog-title">
+  <div class="container">
+    <div class="sec-header"><div><div class="sec-label">Knowledge Base</div><h2 class="sec-title" id="blog-title">जानें <span>भारत के बारे में</span></h2></div><a href="#" class="see-all">सभी Articles →</a></div>
+    <div class="features-grid">
+      <article class="feat-card"><div class="feat-card-accent" style="background:var(--saffron)"></div><div style="font-size:0.72rem;color:var(--saffron);font-weight:700;text-transform:uppercase;margin-bottom:10px">Pincode Guide</div><h3>India के 19,000+ Pincodes कैसे काम करते हैं?</h3><p>पिनकोड क्या है, कैसे पढ़ें, और कैसे किसी भी area का pincode instantly ढूंढें।</p><div style="margin-top:14px;font-size:0.75rem;color:var(--text3)">📖 5 min read • हिंदी & English</div></article>
+      <article class="feat-card"><div class="feat-card-accent" style="background:var(--india-green)"></div><div style="font-size:0.72rem;color:var(--india-green-light);font-weight:700;text-transform:uppercase;margin-bottom:10px">State Guide</div><h3>भारत के 28 राज्य और 8 केंद्र शासित प्रदेश</h3><p>सभी states की capitals, districts, languages, और important facts एक जगह।</p><div style="margin-top:14px;font-size:0.75rem;color:var(--text3)">📖 8 min read • सभी भाषाएं</div></article>
+      <article class="feat-card"><div class="feat-card-accent" style="background:#60a5fa"></div><div style="font-size:0.72rem;color:#60a5fa;font-weight:700;text-transform:uppercase;margin-bottom:10px">GPS Guide</div><h3>Latitude & Longitude क्या है? आसान भाषा में</h3><p>GPS coordinates कैसे काम करती हैं और अपने घर की exact location कैसे पता करें।</p><div style="margin-top:14px;font-size:0.75rem;color:var(--text3)">📖 4 min read • Hindi</div></article>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon" aria-hidden="true">🗺️</div>
+        <div class="logo-text"><div class="main"><span>Bharat</span>Find</div><div class="sub">भारत का नंबर 1 लोकेशन खोज</div></div>
+      </div>
+      <p class="footer-desc">India's most complete multilingual location & services finder. 857+ cities, 6 lakh+ villages, 36 states — all in one place.</p>
+      <div class="tricolor-flag" aria-label="Indian flag colors">
+        <div class="flag-stripe" style="background:#FF9933" title="Saffron"></div>
+        <div class="flag-stripe" style="background:#FFFFFF" title="White"></div>
+        <div class="flag-stripe" style="background:#138808" title="Green"></div>
+        <div style="margin-left:8px;font-size:0.78rem;color:var(--text3)">Made with ❤️ in India</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>खोजें / Search</h4>
+      <ul>
+        <li><a href="#">Cities & Towns</a></li>
+        <li><a href="#">Villages</a></li>
+        <li><a href="#">Pincodes</a></li>
+        <li><a href="#">Hospitals</a></li>
+        <li><a href="#">Railway Stations</a></li>
+        <li><a href="#">Airports</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>भाषाएं / Languages</h4>
+      <ul>
+        <li><a href="#">हिंदी में खोजें</a></li>
+        <li><a href="#">Search in English</a></li>
+        <li><a href="#">தமிழில் தேடு</a></li>
+        <li><a href="#">తెలుగులో వెతకండి</a></li>
+        <li><a href="#">বাংলায় খুঁজুন</a></li>
+        <li><a href="#">मराठीत शोधा</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us / हमारे बारे में</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">API Docs</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 BharatFind. All rights reserved. <a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    <div style="display:flex;gap:12px;align-items:center"><span>🇮🇳 India</span><span>Data: OpenStreetMap, Census India</span></div>
+  </div>
+</footer>
+<div class="whatsapp-float" aria-label="Share on WhatsApp">
+  <div class="wa-tooltip" id="waTooltip" style="display:none">WhatsApp पर share करें!</div>
+  <button class="wa-btn" onclick="shareWhatsApp()" onmouseenter="document.getElementById('waTooltip').style.display='block'" onmouseleave="document.getElementById('waTooltip').style.display='none'" aria-label="Share on WhatsApp">💬</button>
+</div>
+<nav class="bottom-nav" aria-label="Mobile navigation">
+  <button class="bnav-item active" onclick="scrollTo(0,0)" aria-label="Home"><span class="bnav-icon">🏠</span><span class="bnav-label">Home</span></button>
+  <button class="bnav-item" onclick="document.getElementById('heroInput').focus();scrollTo(0,0)" aria-label="Search"><span class="bnav-icon">🔍</span><span class="bnav-label">खोजें</span></button>
+  <button class="bnav-item" onclick="scrollToSection('categories')" aria-label="Categories"><span class="bnav-icon">📋</span><span class="bnav-label">Services</span></button>
+  <button class="bnav-item" onclick="scrollToSection('popular')" aria-label="Popular locations"><span class="bnav-icon">⭐</span><span class="bnav-label">Popular</span></button>
+  <button class="bnav-item" onclick="toggleTheme()" aria-label="Toggle theme"><span class="bnav-icon" id="bnavThemeIcon">🌙</span><span class="bnav-label">Theme</span></button>
+</nav>
+<div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div><script>
+'use strict';
+const TRANSLATIONS = {
+  hi:{'hero1':'खोजो भारत को,','hero2':'हर गांव, हर शहर','hero3':'Find Every Corner of India','search-btn':'खोजें','live':'Live • 36 राज्य • 857+ शहर • 6 लाख+ गांव'},
+  en:{'hero1':'Discover India,','hero2':'Every City & Village','hero3':'Find Every Corner of India','search-btn':'Search','live':'Live • 36 States • 857+ Cities'}
+};
+const CITIES=[{n:"Mumbai",s:"Maharashtra",d:"Mumbai City",la:18.9667,lo:72.8333,t:"city",pop:"2.1 Cr"},{n:"Delhi",s:"Delhi",d:"New Delhi",la:28.6333,lo:77.2167,t:"city",pop:"1.9 Cr"},{n:"Bengaluru",s:"Karnataka",d:"Bengaluru Urban",la:12.9667,lo:77.5833,t:"city",pop:"1.3 Cr"},{n:"Hyderabad",s:"Telangana",d:"Hyderabad",la:17.3833,lo:78.4667,t:"city",pop:"1.0 Cr"},{n:"Chennai",s:"Tamil Nadu",d:"Chennai",la:13.0833,lo:80.2833,t:"city",pop:"87 L"},{n:"Kolkata",s:"West Bengal",d:"Kolkata",la:22.5667,lo:88.3667,t:"city",pop:"75 L"},{n:"Pune",s:"Maharashtra",d:"Pune",la:18.5333,lo:73.8667,t:"city",pop:"73 L"},{n:"Ahmedabad",s:"Gujarat",d:"Ahmedabad",la:23.05,lo:72.6667,t:"city",pop:"72 L"},{n:"Jaipur",s:"Rajasthan",d:"Jaipur",la:26.9167,lo:75.8167,t:"city",pop:"40 L"},{n:"Surat",s:"Gujarat",d:"Surat",la:21.1667,lo:72.9,t:"city",pop:"68 L"},{n:"Lucknow",s:"Uttar Pradesh",d:"Lucknow",la:26.85,lo:80.9167,t:"city",pop:"37 L"},{n:"Kanpur",s:"Uttar Pradesh",d:"Kanpur Nagar",la:26.4667,lo:80.35,t:"city",pop:"30 L"},{n:"Nagpur",s:"Maharashtra",d:"Nagpur",la:21.15,lo:79.0833,t:"city",pop:"26 L"},{n:"Patna",s:"Bihar",d:"Patna",la:25.6167,lo:85.1333,t:"city",pop:"25 L"},{n:"Indore",s:"Madhya Pradesh",d:"Indore",la:22.7167,lo:75.8333,t:"city",pop:"25 L"},{n:"Bhopal",s:"Madhya Pradesh",d:"Bhopal",la:23.25,lo:77.4,t:"city",pop:"24 L"},{n:"Visakhapatnam",s:"Andhra Pradesh",d:"Visakhapatnam",la:17.7,lo:83.3,t:"city",pop:"21 L"},{n:"Vadodara",s:"Gujarat",d:"Vadodara",la:22.3,lo:73.2333,t:"city",pop:"21 L"},{n:"Agra",s:"Uttar Pradesh",d:"Agra",la:27.1833,lo:78.0167,t:"city",pop:"17 L"},{n:"Varanasi",s:"Uttar Pradesh",d:"Varanasi",la:25.3333,lo:83.0,t:"city",pop:"15 L"},{n:"Rajkot",s:"Gujarat",d:"Rajkot",la:22.3,lo:70.9333,t:"city",pop:"15 L"},{n:"Meerut",s:"Uttar Pradesh",d:"Meerut",la:28.9833,lo:77.7,t:"city",pop:"14 L"},{n:"Ghaziabad",s:"Uttar Pradesh",d:"Ghaziabad",la:28.6667,lo:77.4333,t:"city",pop:"23 L"},{n:"Noida",s:"Uttar Pradesh",d:"Gautam Buddh Nagar",la:28.5333,lo:77.3667,t:"city",pop:"10 L"},{n:"Kochi",s:"Kerala",d:"Ernakulam",la:9.9667,lo:76.3,t:"city",pop:"21 L"},{n:"Coimbatore",s:"Tamil Nadu",d:"Coimbatore",la:11.0167,lo:76.9667,t:"city",pop:"21 L"},{n:"Dehradun",s:"Uttarakhand",d:"Dehradun",la:30.3167,lo:78.0333,t:"city"},{n:"Amritsar",s:"Punjab",d:"Amritsar",la:31.6333,lo:74.8667,t:"city"},{n:"Guwahati",s:"Assam",d:"Kamrup Metropolitan",la:26.1667,lo:91.75,t:"city"},{n:"Ayodhya",s:"Uttar Pradesh",d:"Faizabad",la:26.7833,lo:82.2,t:"city"},{n:"Chandigarh",s:"Chandigarh",d:"Chandigarh",la:30.7333,lo:76.7833,t:"ut"},{n:"Shimla",s:"Himachal Pradesh",d:"Shimla",la:31.1,lo:77.1667,t:"city"},{n:"Goa",s:"Goa",d:"North Goa",la:15.4,lo:74.0,t:"city"},{n:"Mysuru",s:"Karnataka",d:"Mysuru",la:12.3,lo:76.6667,t:"city"},{n:"Jodhpur",s:"Rajasthan",d:"Jodhpur",la:26.3,lo:73.0333,t:"city"},{n:"Ranchi",s:"Jharkhand",d:"Ranchi",la:23.35,lo:85.3333,t:"city"},{n:"Bhubaneswar",s:"Odisha",d:"Khordha",la:20.2667,lo:85.8333,t:"city"}];
+const STATES=[{n:"Andhra Pradesh",cap:"Amaravati",la:16.0,lo:80.0,code:"AP"},{n:"Arunachal Pradesh",cap:"Itanagar",la:27.083,lo:93.617,code:"AR"},{n:"Assam",cap:"Dispur",la:26.133,lo:91.767,code:"AS"},{n:"Bihar",cap:"Patna",la:25.617,lo:85.133,code:"BR"},{n:"Chhattisgarh",cap:"Raipur",la:21.233,lo:81.633,code:"CG"},{n:"Goa",cap:"Panaji",la:15.5,lo:73.833,code:"GA"},{n:"Gujarat",cap:"Gandhinagar",la:23.05,lo:72.667,code:"GJ"},{n:"Haryana",cap:"Chandigarh",la:29.0,lo:76.5,code:"HR"},{n:"Himachal Pradesh",cap:"Shimla",la:31.1,lo:77.167,code:"HP"},{n:"Jharkhand",cap:"Ranchi",la:23.35,lo:85.333,code:"JH"},{n:"Karnataka",cap:"Bengaluru",la:12.967,lo:77.583,code:"KA"},{n:"Kerala",cap:"Thiruvananthapuram",la:8.5,lo:76.917,code:"KL"},{n:"Madhya Pradesh",cap:"Bhopal",la:23.25,lo:77.4,code:"MP"},{n:"Maharashtra",cap:"Mumbai",la:18.967,lo:72.833,code:"MH"},{n:"Manipur",cap:"Imphal",la:24.817,lo:93.95,code:"MN"},{n:"Meghalaya",cap:"Shillong",la:25.567,lo:91.883,code:"ML"},{n:"Mizoram",cap:"Aizawl",la:23.733,lo:92.717,code:"MZ"},{n:"Nagaland",cap:"Kohima",la:25.667,lo:94.117,code:"NL"},{n:"Odisha",cap:"Bhubaneswar",la:20.267,lo:85.833,code:"OR"},{n:"Punjab",cap:"Chandigarh",la:30.733,lo:76.783,code:"PB"},{n:"Rajasthan",cap:"Jaipur",la:26.917,lo:75.817,code:"RJ"},{n:"Sikkim",cap:"Gangtok",la:27.333,lo:88.617,code:"SK"},{n:"Tamil Nadu",cap:"Chennai",la:13.083,lo:80.283,code:"TN"},{n:"Telangana",cap:"Hyderabad",la:17.383,lo:78.467,code:"TG"},{n:"Tripura",cap:"Agartala",la:23.833,lo:91.283,code:"TR"},{n:"Uttar Pradesh",cap:"Lucknow",la:26.85,lo:80.917,code:"UP"},{n:"Uttarakhand",cap:"Dehradun",la:30.317,lo:78.033,code:"UK"},{n:"West Bengal",cap:"Kolkata",la:22.567,lo:88.367,code:"WB"},{n:"Delhi",cap:"New Delhi",la:28.633,lo:77.217,code:"DL",type:"ut"},{n:"Chandigarh",cap:"Chandigarh",la:30.733,lo:76.783,code:"CH",type:"ut"},{n:"Jammu and Kashmir",cap:"Srinagar",la:33.7,lo:76.0,code:"JK",type:"ut"},{n:"Ladakh",cap:"Leh",la:34.15,lo:77.583,code:"LA",type:"ut"},{n:"Puducherry",cap:"Puducherry",la:11.933,lo:79.833,code:"PY",type:"ut"},{n:"Lakshadweep",cap:"Kavaratti",la:10.567,lo:72.633,code:"LD",type:"ut"},{n:"Andaman and Nicobar",cap:"Port Blair",la:11.667,lo:92.75,code:"AN",type:"ut"},{n:"Dadra and Nagar Haveli",cap:"Daman",la:20.4,lo:72.9,code:"DN",type:"ut"}];
+const SEARCH_IDX=[];
+STATES.forEach(s=>SEARCH_IDX.push({n:s.n,t:s.type||"state",s:s.n,extra:s.cap,la:s.la,lo:s.lo,code:s.code}));
+CITIES.forEach(c=>SEARCH_IDX.push({n:c.n,t:"city",s:c.s,extra:c.d,la:c.la,lo:c.lo,pop:c.pop||""}));
+let currentResults=[],kbIdx=-1,searchTimer=null,lastSelected=null;
+function smartSearch(q,limit){limit=limit||12;if(!q||q.length<1)return[];const ql=q.toLowerCase().trim();const out=[],seen=new Set();const add=(item,score)=>{const k=item.t+":"+item.n;if(!seen.has(k)){seen.add(k);out.push({...item,sc:score})}};for(const it of SEARCH_IDX){if(it.n.toLowerCase()===ql)add(it,10)}for(const it of SEARCH_IDX){if(it.n.toLowerCase().startsWith(ql))add(it,7)}for(const it of SEARCH_IDX){if(it.n.toLowerCase().includes(ql))add(it,4)}for(const it of SEARCH_IDX){if((it.s||"").toLowerCase().includes(ql))add(it,2)}out.sort((a,b)=>b.sc-a.sc||(a.t==="state"?-1:1));return out.slice(0,limit)}
+function hl(text,q){if(!q)return text;try{const rx=new RegExp("("+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi");return text.replace(rx,"<mark>$1</mark>")}catch(e){return text}}
+function getIcon(t){return{state:"🏛️",ut:"⭐",city:"🏙️",village:"🌾",district:"🗂️"}[t]||"📍"}
+function getTagClass(t){return{state:"tag-state",ut:"tag-state",city:"tag-city",district:"tag-dist"}[t]||"tag-city"}
+function getPinClass(t){return{state:"ddi-state",ut:"ddi-state",city:"ddi-city",district:"ddi-district",village:"ddi-village"}[t]||"ddi-city"}
+function renderDropdown(res,q,ddEl){currentResults=res;kbIdx=-1;if(!res.length){ddEl.innerHTML='<div class="dd-no-results">No results found for "'+q+'"</div>';ddEl.classList.add("open");return}let html='<div class="dd-section-title"><span>📍 Results</span><span class="dd-count">'+res.length+" found</span></div>";res.forEach((r,i)=>{const icon=getIcon(r.t),pinCls=getPinClass(r.t),tagCls=getTagClass(r.t),typeLbl=r.t.charAt(0).toUpperCase()+r.t.slice(1),coordStr=(r.la&&r.lo)?r.la.toFixed(2)+", "+r.lo.toFixed(2):"";html+='<div class="dd-item" data-idx="'+i+'" role="option" tabindex="0" onclick="selectResult('+i+')">'+'<div class="dd-icon '+pinCls+'">'+icon+'</div><div class="dd-info"><div class="dd-name">'+hl(r.n,q)+'</div><div class="dd-meta">'+( r.extra?r.extra+" · ":"")+( r.s||"")+'</div><div class="dd-tags"><span class="dd-tag '+tagCls+'">'+typeLbl+'</span>'+( coordStr?'<span class="dd-tag tag-coords">📍 '+coordStr+"</span>":"")+( r.pop?'<span class="dd-tag" style="color:#fbbf24">👥 '+r.pop+"</span>":"")+'</div></div><div class="dd-arrow">›</div></div>'});ddEl.innerHTML=html;ddEl.classList.add("open")}
+const heroInput=document.getElementById("heroInput");
+const heroDD=document.getElementById("heroDropdown");
+heroInput.addEventListener("input",function(){const q=this.value.trim();if(!q){heroDD.classList.remove("open");return}clearTimeout(searchTimer);searchTimer=setTimeout(()=>{renderDropdown(smartSearch(q),q,heroDD)},120)});
+heroInput.addEventListener("keydown",function(e){const items=heroDD.querySelectorAll(".dd-item");if(!items.length)return;if(e.key==="ArrowDown"){e.preventDefault();kbIdx=Math.min(kbIdx+1,items.length-1);items.forEach((el,i)=>el.classList.toggle("kbactive",i===kbIdx))}else if(e.key==="ArrowUp"){e.preventDefault();kbIdx=Math.max(kbIdx-1,0);items.forEach((el,i)=>el.classList.toggle("kbactive",i===kbIdx))}else if(e.key==="Enter"){if(kbIdx>=0)selectResult(kbIdx);else if(currentResults.length)selectResult(0)}else if(e.key==="Escape")heroDD.classList.remove("open")});
+const navSearch=document.getElementById("navSearch");
+navSearch.addEventListener("input",function(){heroInput.value=this.value;heroInput.dispatchEvent(new Event("input"));window.scrollTo({top:0,behavior:"smooth"});setTimeout(()=>heroInput.focus(),300)});
+document.addEventListener("click",function(e){if(!e.target.closest(".search-box")&&!e.target.closest(".hero-search"))heroDD.classList.remove("open");if(!e.target.closest(".lang-switcher"))document.getElementById("langDropdown").classList.remove("open")});
+function selectResult(idx){const r=currentResults[idx];if(!r)return;heroInput.value=r.n;navSearch.value=r.n;heroDD.classList.remove("open");lastSelected=r;showResult(r)}
+function quickSearch(q){heroInput.value=q;heroInput.focus();heroInput.dispatchEvent(new Event("input"));const res=smartSearch(q);if(res.length>0)setTimeout(()=>selectResult(0),300)}
+function doSearch(){const q=heroInput.value.trim();if(!q){heroInput.focus();return}const res=smartSearch(q);if(res.length>0)selectResult(0);else showToast("No results found. Try different spelling.")}
+function toDMS(deg,dirs){const d=Math.abs(deg),D=Math.floor(d),M=Math.floor((d-D)*60),S=((d-D-M/60)*3600).toFixed(1);return D+"°"+M+"'"+S+'"'+(deg>=0?dirs[0]:dirs[1])}
+function showResult(r){const panel=document.getElementById("resultPanel");document.getElementById("rIcon").textContent=getIcon(r.t);document.getElementById("rName").textContent=r.n;const typeLbl=r.t.charAt(0).toUpperCase()+r.t.slice(1);document.getElementById("rTags").innerHTML='<span class="dd-tag '+getTagClass(r.t)+'">'+typeLbl+"</span>"+(r.s?'<span class="dd-tag tag-dist">🏛️ '+r.s+"</span>":"")+(r.la&&r.lo?'<span class="dd-tag tag-coords">📡 Verified</span>':"")+' ';document.getElementById("rAddr").textContent=[r.extra,r.s,"India"].filter(Boolean).join(", ");const fields=[];if(r.s)fields.push({l:"State",v:r.s});if(r.extra&&r.t!=="state")fields.push({l:"District",v:r.extra});if(r.code)fields.push({l:"Code",v:r.code});if(r.pop)fields.push({l:"Population",v:r.pop});if(r.la)fields.push({l:"Latitude",v:r.la.toFixed(4)+"° N"});if(r.lo)fields.push({l:"Longitude",v:r.lo.toFixed(4)+"° E"});fields.push({l:"Country",v:"🇮🇳 India"});document.getElementById("rFields").innerHTML=fields.map(f=>'<div class="r-field"><div class="r-fl">'+f.l+'</div><div class="r-fv">'+f.v+"</div></div>").join("");let coordHtml="";if(r.la&&r.lo){coordHtml='<div class="coord-chip"><span class="coord-label">LAT</span><span class="coord-val">'+r.la.toFixed(6)+'</span></div><div class="coord-chip"><span class="coord-label">LNG</span><span class="coord-val">'+r.lo.toFixed(6)+'</span></div>';document.getElementById("rMapBtn").onclick=()=>{window.open("https://www.openstreetmap.org/?mlat="+r.la+"&mlon="+r.lo+"#map=12/"+r.la+"/"+r.lo,"_blank")}}else{document.getElementById("rMapBtn").onclick=()=>{window.open("https://www.openstreetmap.org/search?query="+encodeURIComponent(r.n+" India"),"_blank")}}document.getElementById("rCoords").innerHTML=coordHtml;panel.classList.add("show");panel.scrollIntoView({behavior:"smooth",block:"nearest"})}
+function copyResult(){if(!lastSelected)return;const r=lastSelected;const text="📍 "+r.n+"\n🏛️ "+r.s+", India\n"+(r.la?"📡 "+r.la.toFixed(4)+"°N, "+r.lo.toFixed(4)+"°E\n":"");navigator.clipboard.writeText(text).then(()=>showToast("✅ Copied!"))}
+function shareWhatsApp(){let text;if(lastSelected){const r=lastSelected;text="*BharatFind* से मिला 📍\n\n*"+r.n+"*\n🏛️ "+(r.s||"")+", India\n"+(r.la?"📡 "+r.la.toFixed(4)+"°N, "+r.lo.toFixed(4)+"°E":"")+"\n\n_BharatFind: https://bharatfind.in_"}else{text="🗺️ BharatFind - भारत का Location Finder!\nhttps://bharatfind.in"}window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank")}
+const POPULAR=[{n:"Mumbai",e:"🏙️",s:"Maharashtra",la:18.97,lo:72.83},{n:"Delhi",e:"🏛️",s:"Delhi",la:28.63,lo:77.22},{n:"Bengaluru",e:"💻",s:"Karnataka",la:12.97,lo:77.58},{n:"Jaipur",e:"🏯",s:"Rajasthan",la:26.92,lo:75.82},{n:"Varanasi",e:"🛕",s:"Uttar Pradesh",la:25.33,lo:83.00},{n:"Ayodhya",e:"🙏",s:"Uttar Pradesh",la:26.78,lo:82.20},{n:"Chennai",e:"🌊",s:"Tamil Nadu",la:13.08,lo:80.28},{n:"Kolkata",e:"🌸",s:"West Bengal",la:22.57,lo:88.37},{n:"Kochi",e:"⛵",s:"Kerala",la:9.97,lo:76.30},{n:"Shimla",e:"❄️",s:"Himachal Pradesh",la:31.10,lo:77.17},{n:"Goa",e:"🏖️",s:"Goa",la:15.40,lo:74.00},{n:"Amritsar",e:"✨",s:"Punjab",la:31.63,lo:74.87}];
+function renderPopular(){const grid=document.getElementById("popularGrid");grid.innerHTML=POPULAR.map(p=>'<div class="loc-card" role="listitem" onclick="quickSearch(\''+ p.n +'\')" tabindex="0">'+'<div class="loc-emoji">'+p.e+'</div><div class="loc-info"><div class="loc-name">'+p.n+'</div><div class="loc-state">'+p.s+'</div><div class="loc-coords">'+p.la+"°N, "+p.lo+'°E</div></div><div style="color:var(--text3)">›</div></div>').join("")}renderPopular();
+let currentLang="hi";
+function setLang(code,flag,name,native){currentLang=code;document.documentElement.lang=code;document.getElementById("currentLangFlag").textContent=flag;document.getElementById("currentLangName").textContent=name;document.getElementById("langDropdown").classList.remove("open");const t=TRANSLATIONS[code]||TRANSLATIONS.hi;document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.getAttribute("data-i18n");if(t[key])el.innerHTML=t[key]});document.querySelectorAll(".lang-tab").forEach(btn=>btn.classList.toggle("active",btn.textContent.includes(name)||btn.textContent.includes(flag)));const ph={hi:"शहर, गांव, पिनकोड खोजें...",en:"Search city, village, pincode..."};heroInput.placeholder=ph[code]||ph.hi;showToast("🌐 Language: "+name)}
+function toggleLang(){const dd=document.getElementById("langDropdown");const btn=document.getElementById("langBtn");dd.classList.toggle("open");btn.setAttribute("aria-expanded",dd.classList.contains("open"))}
+let isDark=true;
+function toggleTheme(){isDark=!isDark;document.documentElement.setAttribute("data-theme",isDark?"":"light");const icon=isDark?"🌙":"☀️";document.getElementById("themeIcon").textContent=icon;document.getElementById("bnavThemeIcon").textContent=icon;showToast(isDark?"🌙 Dark Mode":"☀️ Light Mode")}
+let recognition=null;
+function startVoice(){const btn=document.getElementById("voiceBtn");const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){showToast("🎤 Voice not supported. Use Chrome!");return}if(!recognition){recognition=new SR();recognition.continuous=false;recognition.interimResults=true;recognition.onresult=function(e){const t=e.results[0][0].transcript;heroInput.value=t;if(e.results[0].isFinal){btn.classList.remove("listening");btn.textContent="🎤";heroInput.dispatchEvent(new Event("input"));const res=smartSearch(t);if(res.length>0)setTimeout(()=>selectResult(0),500)}};recognition.onend=function(){btn.classList.remove("listening");btn.textContent="🎤"};recognition.onerror=function(e){btn.classList.remove("listening");btn.textContent="🎤";showToast("🎤 Error: "+e.error)}}if(btn.classList.contains("listening")){recognition.stop();return}btn.classList.add("listening");btn.textContent="🔴";showToast("🎤 Listening...");recognition.lang=currentLang==="en"?"en-IN":"hi-IN";recognition.start()}
+let deferredPrompt=null;
+window.addEventListener("beforeinstallprompt",(e)=>{e.preventDefault();deferredPrompt=e});
+function installPWA(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null})}else showToast("📲 Open in Chrome & add to Home Screen!")}
+let fontSize=16;
+function increaseFontSize(){fontSize=fontSize>=22?14:fontSize+2;document.documentElement.style.fontSize=fontSize+"px";showToast("Text: "+fontSize+"px")}
+function scrollToSection(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:"smooth",block:"start"})}
+function filterCategory(cat){const q={hospital:"Hospital",school:"School",railway:"Railway Station",temple:"Temple",bank:"Bank",postoffice:"Post Office",airport:"Airport",village:"Village",pincode:"Pincode",college:"College",market:"Market",police:"Police Station"}[cat]||cat;heroInput.value=q;heroInput.focus();window.scrollTo({top:0,behavior:"smooth"});heroInput.dispatchEvent(new Event("input"));showToast("🔍 "+cat)}
+function showToast(msg,duration){duration=duration||2500;const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),duration)}
+document.addEventListener("keydown",function(e){if((e.ctrlKey&&e.key==="k")||(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName))){e.preventDefault();heroInput.focus();heroInput.select()}});
+window.addEventListener("load",function(){console.log("%cBharatFind 🇮🇳","color:#FF6B00;font-size:24px;font-weight:bold;")});
+</script>
+</div>
+</body>
+</html>
